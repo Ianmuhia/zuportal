@@ -1,0 +1,318 @@
+[
+{
+    "model": "jobs.tech_included",
+    "pk": 1,
+    "fields": {
+        "Tech": "<p>ANGULAR JS</p>"
+    }
+},
+{
+    "model": "jobs.tech_included",
+    "pk": 2,
+    "fields": {
+        "Tech": "<p>C++</p>"
+    }
+},
+{
+    "model": "jobs.tech_included",
+    "pk": 3,
+    "fields": {
+        "Tech": "<p>COMPUTER VISION</p>"
+    }
+},
+{
+    "model": "jobs.tech_included",
+    "pk": 4,
+    "fields": {
+        "Tech": "<p>REACT JS</p>"
+    }
+},
+{
+    "model": "jobs.tech_included",
+    "pk": 5,
+    "fields": {
+        "Tech": "<p>NODE JS</p>"
+    }
+},
+{
+    "model": "jobs.tech_included",
+    "pk": 6,
+    "fields": {
+        "Tech": "<p><span style=\"background-color:#27ae60\">DJANGO/PYTHON</span></p>"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 1,
+    "fields": {
+        "Title": "INFORMATION TECHNOLOGY"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 2,
+    "fields": {
+        "Title": "CATERING"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 3,
+    "fields": {
+        "Title": "WEB DEVELOPMENT"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 4,
+    "fields": {
+        "Title": "EDUCATION AND TRAINING"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 5,
+    "fields": {
+        "Title": "PHP PROGRAMMING"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 6,
+    "fields": {
+        "Title": "WEB DESIGNER"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 7,
+    "fields": {
+        "Title": "CUSTOMER SERVICE"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 8,
+    "fields": {
+        "Title": "GRAPHIC DESIGNER"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 9,
+    "fields": {
+        "Title": "FINANCE MANAGMENT"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 10,
+    "fields": {
+        "Title": "SOFTWARE DEVELOPMENT"
+    }
+},
+{
+    "model": "jobs.category",
+    "pk": 11,
+    "fields": {
+        "Title": "MARKETING & SALES"
+    }
+},
+{
+    "model": "jobs.company",
+    "pk": 1,
+    "fields": {
+        "Title": "GOOGLE .INC"
+    }
+},
+{
+    "model": "jobs.company",
+    "pk": 2,
+    "fields": {
+        "Title": "FACEBOOK .INC"
+    }
+},
+{
+    "model": "jobs.company",
+    "pk": 3,
+    "fields": {
+        "Title": "PIED PIPER"
+    }
+},
+{
+    "model": "jobs.company",
+    "pk": 4,
+    "fields": {
+        "Title": "NEWYORK  TIMES"
+    }
+},
+{
+    "model": "jobs.job",
+    "pk": 1,
+    "fields": {
+        "employer": 1,
+        "title": "Full Stack Developer",
+        "role": "Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at, semper varius orci. Nulla accumsan ac elit in congue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos Class aptent taciti sociosqu ad",
+        "job_type": "Fulltime",
+        "description": "<p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. sed diam voluptua.</p>",
+        "location": "Ruiru/ Kiambu",
+        "thumbnail": "job_thumbnail/1.jpg",
+        "experience_level": "Mid-Level",
+        "salary": 200000,
+        "is_featured": true,
+        "post_date": "2019-10-13T08:37:58.456Z",
+        "category": [
+            1,
+            3,
+            5,
+            10
+        ],
+        "tech": [
+            2,
+            3,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "jobs.job",
+    "pk": 2,
+    "fields": {
+        "employer": 2,
+        "title": "FrontEnd Development",
+        "role": "Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. St",
+        "job_type": "Freelance",
+        "description": "<p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. sed diam voluptua.</p>",
+        "location": "London / UK",
+        "thumbnail": "job_thumbnail/67.jpg",
+        "experience_level": "Senior",
+        "salary": 560000,
+        "is_featured": true,
+        "post_date": "2019-10-13T08:43:49.172Z",
+        "category": [
+            1,
+            3,
+            6,
+            10
+        ],
+        "tech": [
+            1,
+            3,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "jobs.job",
+    "pk": 3,
+    "fields": {
+        "employer": 3,
+        "title": "System Analyst",
+        "role": "Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. St",
+        "job_type": "Fulltime",
+        "description": "<p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. sed diam voluptua.</p>",
+        "location": "China",
+        "thumbnail": "job_thumbnail/12.jpg",
+        "experience_level": "Senior",
+        "salary": 1000000,
+        "is_featured": true,
+        "post_date": "2019-10-13T08:46:19.479Z",
+        "category": [
+            1,
+            6,
+            10
+        ],
+        "tech": [
+            1,
+            2,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "jobs.job",
+    "pk": 4,
+    "fields": {
+        "employer": 3,
+        "title": "Ethical Hacker",
+        "role": "Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. St",
+        "job_type": "Freelance",
+        "description": "<p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. sed diam voluptua.</p>",
+        "location": "West Virginia/ Texas",
+        "thumbnail": "job_thumbnail/20.jpg",
+        "experience_level": "Mid-Level",
+        "salary": 9010000,
+        "is_featured": true,
+        "post_date": "2019-10-13T08:49:28.109Z",
+        "category": [
+            1,
+            3,
+            10
+        ],
+        "tech": [
+            1,
+            2,
+            3,
+            4
+        ]
+    }
+},
+{
+    "model": "jobs.job",
+    "pk": 5,
+    "fields": {
+        "employer": 2,
+        "title": "Senior Chef",
+        "role": "Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. St",
+        "job_type": "Fulltime",
+        "description": "<p>emptyLorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. sed diam voluptua.</p>",
+        "location": "Hongkong / China",
+        "thumbnail": "job_thumbnail/67_zzkpKF3.jpg",
+        "experience_level": "Senior",
+        "salary": 302000,
+        "is_featured": true,
+        "post_date": "2019-10-13T08:53:08.830Z",
+        "category": [
+            2,
+            9,
+            11
+        ],
+        "tech": [
+            2,
+            3,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "jobs.job",
+    "pk": 6,
+    "fields": {
+        "employer": 4,
+        "title": "Journalist",
+        "role": "Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. St",
+        "job_type": "Temporary",
+        "description": "<p>Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, no sea takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. no sea takimata sanctus est Lorem ipsum dolor sit amet. sed diam voluptua.</p>",
+        "location": "New York / USA",
+        "thumbnail": "job_thumbnail/11.jpg",
+        "experience_level": "Mid-Level",
+        "salary": 260000,
+        "is_featured": true,
+        "post_date": "2019-10-13T08:57:07.612Z",
+        "category": [
+            4,
+            7
+        ],
+        "tech": [
+            1,
+            2,
+            3,
+            5
+        ]
+    }
+}
+]

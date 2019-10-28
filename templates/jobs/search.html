@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% load humanize %}
+
+{% block content %}
+
+<body>
+    <!-- header -->
+    
+   
+    <section class="employ-sec">
+        <div class="container">
+            <div class="title-sec-w3layouts_pvt text-center pb-4">
+             <h4 class="w3layouts_pvt-head">allowing you to expand quickly.</h4>
+            </div>
+
+
+        <div class="row justify-content-between bnr-form-w3ls">
+                                <div class="col-lg-4">
+                                    <h4>A better career is out there. We'll help you find it to use.</h4>
+                                </div>
+                                <div class="col-lg-8">
+
+                                    <form action="{% url 'search' %}"  class="bnr-field">
+                                    
+
+                                        <div class="row">
+                                            <div class="col-md-5 form-group mb-md-0">
+                                                <label class="text-capitalize">
+                                                    looking for job
+                                                </label>
+                                                <input  type="text" name="title"  for="title"
+                                                    for="title" placeholder="Job title,Keywords" value="{{ values.title}}">
+                                            </div>
+                                             <div class="col-md-5 mb-md-0 form-group">
+                                                <label class="text-capitalize">
+                                                    place to work
+                                                </label>
+                                                <input   type="text" name="location" for="location"
+                                                    placeholder="City,State,zip" value="{{ values.location }}">> 
+                                            </div>
+                                            <div class="col-md-2 d-flex align-items-end">
+                                                <button type="submit" class="btn btn-w3ltd bg-theme  btn-block w-100 font-weight-bold text-uppercase"><span
+                                                        class="fa fa-search"></span></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+     <!-- jobs --> <nav aria-label="breadcrumb">
+            <ol class="breadcrumb d-flex justify-content-center bg-theme">
+                <li class="breadcrumb-item">
+                    <a href="index.html" class="text-white">Home</a>
+                </li>
+                 <li class="breadcrumb-item">
+                    <a href="index.html" class="text-white">Job List</a>
+                </li>
+                <li class="breadcrumb-item active text-white font-weight-bold" aria-current="page">Search</li>
+            </ol>
+        </nav>
+            
+            {% comment %} jobs lits search{% endcomment %}
+                
+                   <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-sm-6 e-left">
+                                {% if  jobs%}
+
+                                {% for job in jobs %}
+
+                                <a href="{% url 'job' job.id %}"><img src="{{ job.thumbnail.url}}" alt=""
+                                        class="img-fluid"></a>
+                                <div class="e-desc">
+                                    <h6><a href="job_single.html">{{ job.title }} </a></h6>
+
+                                    <ul class="e-tags">
+
+
+                                        <li>{{ job.tech }}</li>
+
+                                    </ul>
+                                    <hr>
+                                    <ul class="desc-list">
+                                        <li>
+                                            <span>Location: </span>
+                                            {{ job.location }}
+                                        </li>
+                                        <li>
+                                            <span>Salary: </span>
+                                            {{ job.salary | intcomma }}
+                                        </li>
+                                        <li>
+                                            <span>Experience: </span>
+                                            {{ job.experience_level}}
+                                        </li>
+                                        <li>
+                                            <span>Posted: </span>
+                                            {{ job.post_date | timesince}}
+                                        </li>
+                                    </ul>
+                                    <a href="{% url 'job' job.id %}" class="btn wthree-bnr-btn text-capitalize"
+                                        aria-pressed="false" role="button" >More Info</a>
+                                </div>
+                            </div>
+                            {% endfor %}
+
+                            {% else%}
+
+                            <div class="col-md-12">
+
+                                <p> No Jobs Available</p>
+
+                            </div>
+
+                            {% endif %}
+
+
+                            <div class="d-flex justify-content-center">
+
+
+                                {% if jobs.has_other_pages %}
+                                <ul class="pagination pt-4">
+
+                                    {% if  job.has_previous %}
+                                    <li><a href="?page={{ jobs.previous_page_number }}"><i
+                                                class="fa fa-angle-left"></i></a></li>
+                                    {% else %}
+                                    <li class="page-item diasbled" "fa fa-angle-left">
+                                        <a aria-label="Previous"><i class="fa fa-angle-left"></i></a </li> {% endif %}
+                                            {% for i in jobs.paginator.page_range %} {% if jobs.number == i %} <li
+                                            class="page-item active">
+                                        <a href="{{i}}" class="text-white bg-theme">{{i}}</a>
+                                    </li>
+                                    {% else %}
+                                    <li><a href="?page={{i}}" lass="page-link">{{i}}</a></li>
+                                    {% endif %}
+                                    {% endfor%}
+
+                                    {% if jobs.has_next %}
+                                    <li> <a href="?page={{jobs.next_page_number}}" aria-label="Next"><i
+                                                class="fa fa-angle-right"></i></a>
+                                    </li>
+                                    {% else %}
+                                    <li> <a aria-label="Next"><i class="fa fa-angle-right"></i></a>
+                                    </li>
+                                    {% endif %}
+
+
+                                </ul>
+                                {% endif %}
+                            </div>
+                        </div>
+    </section>
+    <!-- //jobs -->
+
+</body>
+
+</html>
+
+{% endblock content %}

@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "/home/wolf/projects/tweete_app/bin/python",
+    "python.formatting.provider": "black",
+    "eslint.enable": false,
+    "jshint.enable": true,
+    "standard.enable": false,
+    "tslint.enable": false
+}

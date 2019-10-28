@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block branding %}
+<h1 id="head"><img src="{% static 'images/logo.png' %}" alt="Z.U portal" width="80" heigth="50"><strong>Admin
+        Area</strong>
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" href="{% static 'css/admin.css' %}">
+{% endblock extrastyle %}
