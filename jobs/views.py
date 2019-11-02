@@ -5,8 +5,15 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from . models import Job,Category,Company, Tech_included,Job_Application
 from django.http import HttpResponse
 
+"""
+Index function provides all the job listing ordering them by post date and
+filtering them by those of which are featured.
+"""
 def index(request):
     jobs = Job.objects.order_by('-post_date').filter(is_featured=True)
+    """
+    Jobs rendered are paginated by 3 per page.
+    """
     paginator = Paginator(jobs,3)
     page = request.GET.get('page')
     paged_jobs = paginator.get_page(page)
@@ -16,6 +23,12 @@ def index(request):
     return render(request, 'jobs/job_list.html', context)
 
 
+
+"""
+The job function is used to route the user to specific jobs 
+using job_id as the pk, and rendering a 404 if none found.
+"""
+
 def job(request, job_id):
     job = get_object_or_404(Job, pk=job_id)
     context = {
@@ -24,8 +37,9 @@ def job(request, job_id):
     return render(request, 'jobs/job_single.html', context)
 
 
-
-
+"""
+Search function to look for job using keywords, title etc and locations.
+"""
 def search(request):
     jobs = Job.objects.order_by('-post_date').filter(is_featured=True)
     
@@ -42,14 +56,16 @@ def search(request):
             jobs =jobs.filter(location__iexact = location)
     context = {
         'jobs':jobs,
-    
         'values': request.GET    
-        
-    }
-
+            }
     return render (request, 'jobs/search.html', context)
 
 
+"""
+Job application form logic, sending of emails to the job employers
+about the job being applied for ,is provided by the apply function.
+
+"""
 def apply(request):
     if request.method == 'POST':
 
@@ -63,9 +79,7 @@ def apply(request):
         user_id = request.POST.get('user_id')
         company_email = request.POST.get('company_email')
 
-
-
-        #check if user has already applied
+       #check if user has already applied
 
         if request.user.is_authenticated:
             user_id = request.user.id
