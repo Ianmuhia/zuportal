@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "charts.apps.ChartsConfig",
     'django.contrib.humanize',
     "jobs.apps.JobsConfig",
-     "chartjs",
+    "chartjs",
     "ckeditor",
 ]
 
