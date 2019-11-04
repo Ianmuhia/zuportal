@@ -1,3 +1,6 @@
+from django.conf import settings
+from django.core.cache.backends.base import DEFAULT_TIMEOUT
+from django.views.decorators.cache import cache_page
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -9,6 +12,11 @@ from django.http import HttpResponse
 Index function provides all the job listing ordering them by post date and
 filtering them by those of which are featured.
 """
+
+
+CACHE_TTL = getattr(settings, 'CACHE_TTL', DEFAULT_TIMEOUT)
+
+@cache_page(CACHE_TTL)
 def index(request):
     jobs = Job.objects.order_by('-post_date').filter(is_featured=True)
     """

@@ -41,17 +41,20 @@ INSTALLED_APPS = [
     'djangobower',
     "django_nvd3",
     "rest_framework",
+    
     "accounts.apps.AccountsConfig",
     "contacts.apps.ContactsConfig",
     "charts.apps.ChartsConfig",
     'django.contrib.humanize',
     "jobs.apps.JobsConfig",
+    "debug_toolbar",
     "chartjs",
     "ckeditor",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -134,6 +137,8 @@ STATICFILES_DIRS = [
 
     os.path.join(BASE_DIR, 'recruit/static')
 ]
+
+
 # media folder location and url
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -185,4 +190,36 @@ CACHES = {
         },
         "KEY_PREFIX": "example"
     }
+}
+
+# Cache time to live is 15 minutes
+CACHE_TTL = 60 * 15
+
+# debug toolbar internal IPs
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
+]
+
+
+
+#Logging info configurations
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/home/wolf/projects/tweete_app/zuportal.log',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
 }
