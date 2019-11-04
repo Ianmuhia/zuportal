@@ -170,6 +170,11 @@ BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
 
 BOWER_PATH = 'usr/local/bin/bower'
 
+"""
+Added the cache settings to increase productivity of the database
+increasing the requests per second.
+redis provides higher capability than django-memcache.
+"""
 
 CACHES = {
     "default": {
